@@ -7,6 +7,11 @@ delegatecall
 - a low level function similar to call
 - when contract A delegatecall contract B, it runs B's code inside A's context (storage, msg.sender, msg.value)
 - can upgrade contract A without changing any code inside it
+
+Summary 
+- delegatecall runs code of callee in caller's context (storage, msg.sender, msg.value)
+- state variables must be same for caller and callee
+- can use delegatecall to upgrade contract
 */
 
 contract B {
